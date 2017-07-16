@@ -1,0 +1,91 @@
+@import "settings";
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  color: $heading-font-color;
+}
+
+a {
+  font-family: $link-font-family;
+  color: $link-font-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-font-color;
+  }
+}
+
+nav {
+  width: 100%;
+  //background-color: map_get($colors, lightest-gray);
+  //border-bottom: 1px solid map_get($colors, lightest-gray);
+
+  h1,
+  h3 {
+    margin: 1rem;
+  }
+}
+
+.flex-separate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.post-title {
+  display: block;
+  text-align: center;
+}
+
+.post-title-container {
+  height: 100px;
+}
+
+.post-image {
+  //max-width: 80%;
+  max-height: 400px;
+  align-self: center;
+}
+
+.post-image-container {
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spin {
+  animation: App-logo-spin infinite 3s linear;
+  width: 30px;
+  margin-top: 125px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.content-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  a {
+    margin: 0 5px;
+  }
+}
