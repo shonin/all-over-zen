@@ -2,6 +2,9 @@
 
 body {
   margin: 0;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  color: $font-color;
 }
 
 h1,
@@ -41,7 +44,7 @@ nav {
 }
 
 .main-content {
-  margin-top: 8rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -58,9 +61,7 @@ nav {
 }
 
 .post-image {
-  //max-width: 80%;
   max-height: 400px;
-  align-self: center;
 }
 
 .post-image-container {
@@ -86,6 +87,21 @@ nav {
   margin-top: 2rem;
 
   a {
-    margin: 0 5px;
+    margin: 0 10px;
+  }
+}
+
+.nav-bar {
+  height: 65px;
+}
+
+.navigation {
+  list-style: none;
+  display: inline-flex;
+  margin: 1.5rem 0 0;
+  padding: 0;
+
+  li {
+    margin: 0 20px;
   }
 }

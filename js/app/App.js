@@ -4,50 +4,25 @@ import Content from "./components/Content";
 import React from "react";
 import {
     BrowserRouter as Router,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
-
-class MyTest extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            foo: "bar",
-            num: Number(this.props.match.params.num)
-        };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        // console.log(nextProps);
-        this.setState({
-            num: Number(nextProps.match.params.num)
-        });
-    }
-
-    render() {
-        return(
-            <div>
-                <h1>Testing {this.state.num}</h1>
-                <Link to={`/${this.state.num + 1}`}>Next</Link>
-                <Link to={`/${this.state.num - 1}`}>Previous</Link>
-            </div>
-        );
-    }
-}
-
 
 const Foo = ({ match }) => (
     <Content match={match} />
-    // <MyTest match={match} />
+);
+
+const Words = ({match}) => (
+    <h5 style={{ textAlign: "center"}}>i dont have many at the moment</h5>
 );
 
 const App = () => (
     <div>
-        <Menu />
         <Router>
             <div>
+                <Menu />
                 <Route exact path="/" component={Foo}/>
-                <Route path="/:num" component={Foo}/>
+                <Route path="/words" component={Words}/>
+                <Route path="/:num([0-9]+)" component={Foo}/>
             </div>
         </Router>
     </div>

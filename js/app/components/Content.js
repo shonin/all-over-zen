@@ -35,7 +35,6 @@ class Content extends React.Component {
     getImage(imageNumber) {
         this.imagePromise(imageNumber)
             .then( response => {
-                console.log(response);
                 this.setState({
                     img_url: response.post.image_url,
                     title: response.post.title,
@@ -44,7 +43,6 @@ class Content extends React.Component {
                     next: response.next,
                     previous: response.previous
                 });
-                console.log("received response");
             });
     };
 
@@ -75,7 +73,13 @@ class Content extends React.Component {
                     <h3 className="post-title">{this.state.title}</h3>
                 </div>
                 <div className="post-image-container">
-                    <img className={`post-image ${this.state.imageClass}`} src={this.state.img_url} onLoad={this.handleImageLoaded.bind(this)}/>
+                    <img
+                        className={`post-image ${this.state.imageClass}`}
+                        src={this.state.img_url}
+                        onLoad={this.handleImageLoaded.bind(this)}
+                        title={this.state.hover_text}
+                    />
+                    <p>{this.state.sub_text}</p>
                 </div>
                 <div className="content-navigation">
                     { this.state.imageNumber !== 1 &&
