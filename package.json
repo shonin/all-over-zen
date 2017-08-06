@@ -8,7 +8,6 @@
     "url": "git+https://github.com/shonin/alloverreact.git"
   },
   "author": "shonin",
-  "license": "ISC",
   "homepage": "https://github.com/shonin/alloverreact#readme",
   "devDependencies": {
     "babel-core": "^6.24.1",
