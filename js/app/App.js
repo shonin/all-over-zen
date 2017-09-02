@@ -11,16 +11,9 @@ const ImagesWrapper = ({ match }) => (
     <Content match={match} />
 );
 
-const wat = () => {
-    console.log("srsly wat");
-    return "foo";
-};
-
 const WordsWrapper = ({match}) => (
     <h5 style={{ textAlign: "center"}}>
         i dont have many at the moment
-        {match.params.num}
-        {wat()}
     </h5>
 );
 
