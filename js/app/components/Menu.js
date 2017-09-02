@@ -12,7 +12,7 @@ class Menu extends React.Component {
                     { settings.wordsEnabled &&
                         <ul className="navigation">
                             <li><Link to="/">images</Link></li>
-                            <li><Link to="/words/123/3ger">words</Link></li>
+                            <li><Link to="/words">words</Link></li>
                         </ul>
                     }
                 </div>
