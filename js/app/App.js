@@ -1,5 +1,6 @@
 import Menu from "./components/Menu";
 import Content from "./components/Content";
+import Words from "./components/Words";
 
 import React from "react";
 import {
@@ -12,9 +13,7 @@ const ImagesWrapper = ({ match }) => (
 );
 
 const WordsWrapper = ({match}) => (
-    <h5 style={{ textAlign: "center"}}>
-        i dont have many at the moment
-    </h5>
+    <Words match={match} />
 );
 
 const App = () => (

@@ -68,7 +68,7 @@ class Content extends React.Component {
 
     render() {
         return(
-            <div className="main-content">
+            <div className="main-image-content">
                 <div className="post-title-container">
                     <h3 className="post-title">{this.state.title}</h3>
                 </div>

@@ -29,8 +29,6 @@ a {
 
 nav {
   width: 100%;
-  //background-color: map_get($colors, lightest-gray);
-  //border-bottom: 1px solid map_get($colors, lightest-gray);
 
   h1,
   h3 {
@@ -43,31 +41,48 @@ nav {
   justify-content: space-between;
 }
 
-.main-content {
+.main-image-content {
   margin-top: 4rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-height: 500px;
+
+  .post-title {
+    display: block;
+    text-align: center;
+  }
+
+  .post-title-container {
+    height: 100px;
+  }
+
+  .post-image {
+    max-height: 400px;
+  }
+
+  .post-image-container {
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
-.post-title {
-  display: block;
-  text-align: center;
-}
-
-.post-title-container {
-  height: 100px;
-}
-
-.post-image {
-  max-height: 400px;
-}
-
-.post-image-container {
-  height: 400px;
+.main-post-content {
+  width: 80%;
   margin: 0 auto;
-  text-align: center;
+  max-width: 700px;
+
+  .post-title {
+    margin-bottom: 5px;
+  }
+
+  .post-sub-title {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #888;
+    margin-top: 0;
+  }
 }
 
 .spin {
