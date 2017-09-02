@@ -7,12 +7,21 @@ import {
     Route
 } from "react-router-dom";
 
-const Foo = ({ match }) => (
+const ImagesWrapper = ({ match }) => (
     <Content match={match} />
 );
 
-const Words = ({match}) => (
-    <h5 style={{ textAlign: "center"}}>i dont have many at the moment</h5>
+const wat = () => {
+    console.log("srsly wat");
+    return "foo";
+};
+
+const WordsWrapper = ({match}) => (
+    <h5 style={{ textAlign: "center"}}>
+        i dont have many at the moment
+        {match.params.num}
+        {wat()}
+    </h5>
 );
 
 const App = () => (
@@ -20,9 +29,9 @@ const App = () => (
         <Router>
             <div>
                 <Menu />
-                <Route exact path="/" component={Foo}/>
-                <Route path="/words" component={Words}/>
-                <Route path="/:num([0-9]+)" component={Foo}/>
+                <Route exact path="/" component={ImagesWrapper}/>
+                <Route path="/words/:num(\d+)?/" component={WordsWrapper}/>
+                <Route path="/:num([0-9]+)" component={ImagesWrapper}/>
             </div>
         </Router>
     </div>
