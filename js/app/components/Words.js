@@ -27,7 +27,6 @@ class Words extends React.Component {
                     next: response.next,
                     previous: response.previous
                 });
-                console.log(this.state);
             });
     };
 
