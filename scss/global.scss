@@ -25,6 +25,14 @@ a {
   &:visited {
     color: $link-font-color;
   }
+
+  &.no-link-style {
+    color: $font-color;
+
+    &:visited {
+      color: $font-color;
+    }
+  }
 }
 
 nav {
@@ -33,6 +41,14 @@ nav {
   h1,
   h3 {
     margin: 1rem;
+  }
+
+  a {
+    color: $heading-font-color;
+
+    &:visited {
+      color: $heading-font-color;
+    }
   }
 }
 

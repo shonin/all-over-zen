@@ -1,8 +1,6 @@
 $colors: (
-  dark-gray: #222,
   gray: #444,
-  light-gray: #bbb,
-  lightest-gray: #eee
+  red: #d7413d,
 );
 
 $heading-font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15,4 +13,4 @@ $font-weight: 300;
 $font-color: map_get($colors, gray);
 
 $link-font-family: $heading-font-family;
-$link-font-color: map_get($colors, dark-gray);
+$link-font-color: map_get($colors, red);

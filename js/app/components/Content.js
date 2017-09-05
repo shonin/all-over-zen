@@ -83,10 +83,10 @@ class Content extends React.Component {
                 </div>
                 <div className="content-navigation">
                     { this.state.imageNumber !== 1 &&
-                    <Link to={`/${this.state.previous}`}>Prev</Link>
+                    <Link className="no-link-style" to={`/${this.state.previous}`}>Prev</Link>
                     }
                     { this.state.next &&
-                    <Link to={`/${this.state.next}`}>Next</Link>
+                    <Link className="no-link-style" to={`/${this.state.next}`}>Next</Link>
                     }
                 </div>
             </div>

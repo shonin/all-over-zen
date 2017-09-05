@@ -13,6 +13,7 @@ class Menu extends React.Component {
                         <ul className="navigation">
                             <li><Link to="/">images</Link></li>
                             <li><Link to="/words">words</Link></li>
+                            <li><Link to="/about">about</Link></li>
                         </ul>
                     }
                 </div>
