@@ -1,8 +1,12 @@
 import React from "react";
+
 import request from "request";
 import marked from "marked";
+import { Link } from "react-router-dom";
 
+import settings from "../settings";
 import DateParser from "../../dateParser";
+import getPostCustomJS from "../postSpecificJs/getCustom";
 
 class Words extends React.Component {
     constructor(props) {
@@ -16,6 +20,10 @@ class Words extends React.Component {
         this.getPost(this.state.postId);
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.getPost(Number(nextProps.match.params.num));
+    }
+
     getPost(postId) {
         this.postPromise(postId)
             .then( response => {
@@ -27,12 +35,17 @@ class Words extends React.Component {
                     next: response.next,
                     previous: response.previous
                 });
+
+                const postSpecificFunction = getPostCustomJS(response.post.id);
+                if (postSpecificFunction) {
+                    postSpecificFunction();
+                }
             });
     };
 
     postPromise(postId) {
         return new Promise(resolve => {
-            request(`http://alloverzen.herokuapp.com/json/words/${postId ? postId : ""}`, function (error, response, body) {
+            request(`${settings.baseServiceDomain}${settings.wordsUrlPath}/${postId ? postId : ""}`, function (error, response, body) {
                 resolve( JSON.parse(body) );
             });
         });
@@ -49,6 +62,14 @@ class Words extends React.Component {
     render() {
         return (
             <div className="main-post-content">
+                <div className="post-navigation">
+                    { this.state.previous &&
+                    <Link className="no-link-style" to={`/words/${this.state.previous}`}>Prev</Link>
+                    }
+                    { this.state.next &&
+                    <Link className="no-link-style" to={`/words/${this.state.next}`}>Next</Link>
+                    }
+                </div>
                 <div className="post-title-container">
                     <h1 className="post-title">{this.state.title}</h1>
                     <h2 className="post-sub-title">{this.state.sub_title}</h2>

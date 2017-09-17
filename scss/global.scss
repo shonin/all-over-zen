@@ -122,6 +122,16 @@ nav {
   }
 }
 
+.post-navigation {
+  display: flex;
+  justify-content: left;
+  margin: 2rem 0;
+
+  a {
+    margin: 0 10px;
+  }
+}
+
 .nav-bar {
   height: 65px;
 }
