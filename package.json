@@ -29,7 +29,10 @@
     "stylelint-webpack-plugin": "^0.7.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0"
   },
   "eslintConfig": ".eslintrc.js",
   "scripts": {
@@ -49,10 +52,6 @@
     "stylelint": "./node_modules/.bin/stylelint '**/*.scss' --syntax scss"
   },
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babelify": "^7.3.0",
     "marked": "^0.3.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
