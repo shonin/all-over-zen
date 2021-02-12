@@ -48,7 +48,7 @@ class Content extends React.Component {
 
     imagePromise(imageNumber) {
         return new Promise(resolve => {
-            request(`http://alloverzen.herokuapp.com/json/${imageNumber ? imageNumber : ""}`, function (error, response, body) {
+            request(`https://alloverzen.herokuapp.com/json/${imageNumber ? imageNumber : ""}`, function (error, response, body) {
                 resolve( JSON.parse(body) );
             });
         });
